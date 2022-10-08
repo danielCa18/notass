@@ -1,0 +1,26 @@
+nm= int(input("inserte su numero de materias "))
+materia= ""
+nota= ""
+materiasnotas={}
+for i in range(nm):
+    materia= input("inserte la materia")
+    nota= float(input("inserte su nota de la materia (si no tiene nota, ponga 0)"))
+    materiasnotas[materia]= nota
+materiasconnotas= []
+materiassinnotas= []
+for i in materiasnotas:
+    if materiasnotas[i]==0:
+        materiassinnotas.append(i)
+    else:
+        materiasconnotas.append(i)
+sum=0
+for i in materiasconnotas:
+    sum+= materiasnotas[i]
+notafinal= sum/len(materiasconnotas)
+print("su nota final es " + str(notafinal))
+notadeseada= float(input("inserte su nota deseada"))
+high=10
+low=0
+ans= (high+low/2)
+
+
